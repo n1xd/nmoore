@@ -41,16 +41,19 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    width: 95%; /* Consider using max-width for very wide screens */
+    width: 100%; /* Changed from 95% to 100% */
     z-index: 1000;
-    height: 50vh; /* Fixed height */
-    margin: 0 auto; /* Centered horizontally */
-    padding: 0; /* Fixed padding */
+    height: 20vmin; /* Fixed height */
     display: flex;
+    margin: 0 auto;
     align-items: center; /* This ensures vertical centering within the navbar */
     justify-content: flex-end;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), transparent); 
     flex-wrap: nowrap;
+}
+
+.navbar ul li:last-child {
+    margin-right: 5vw; /* Adjust this value as needed */
 }
 
 .navbar ul li {
@@ -101,16 +104,16 @@ body {
 
 .content_cover p {
     text-align: center;
-    font-size: 2.5vh;
-    line-height: 3.5vh;
+    font-size: 2.5vmin;
+    line-height: 3.5vmin;
     max-width: 60%;
     margin: 5% 20%; 
 }
 
 .content_cover h1{
-    font-size: 7vh;
+    font-size: 7vmin;
     max-width: 100%;
-    margin-top: 15vh;
+    margin-top: 15vmin;
 }
 
 /*about*/
@@ -121,24 +124,23 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    width: 60vmax;
+    width: 60%;
     text-align: center;
-    padding-top: 0px;
 }
 
 .content_intro p {
     text-align: justify;
     font-size: 2.5vmin;
     line-height: 3.5vmin;
+    max-width: 80%;
     margin: 5% 20%; 
 }
-
 
 .content_intro h1 {
     font-size: 7vmin;
     color: #fff;
     text-align: center;
-    margin-top: 15vmin; 
+    margin-top: 15vmin;
 }
 
 /*projects*/
@@ -164,24 +166,24 @@ body {
 }
 
 .content_projects h1, .content_projects h2, .content_projects h3, .content_projects p {
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
     margin: 0 auto;
     max-width: 80%; 
 }
 
 .content_projects h1{
-    font-size: 7vh;
+    font-size: 7vmin;
     max-width: 100%;
-    margin-top: 15vh;
+    margin-top: 15vmin;
 }
 
 .content_projects h3{
-    font-size: 2vw;
+    font-size: 3vmin;
     max-width: 100%;
 }
 
 .content_projects p{
-    font-size: 2.5vh;
+    font-size: 2.5vmin;
     max-width: 100%;
     margin: 5vh 0;
 }
@@ -369,6 +371,7 @@ body {
     background-color: transparent; /* Transparent background on hover */
     transform: scale(1.1);
 }
+
 
 /*thinking*/
 
