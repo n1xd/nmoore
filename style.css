@@ -43,7 +43,7 @@ body {
     top: 0;
     width: 95%; /* Consider using max-width for very wide screens */
     z-index: 1000;
-    height: 20vmax; /* Fixed height */
+    height: 50vh; /* Fixed height */
     margin: 0 auto; /* Centered horizontally */
     padding: 0; /* Fixed padding */
     display: flex;
