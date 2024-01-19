@@ -500,4 +500,29 @@ body {
     .thought-card .thought-content{
         font-size: 5vw;
     }
+
+    .content_contact h1{
+    font-size: 12vw;
+    max-width: 100%;
+    margin-top: 15vh;
+}
+
+.content_contact p{
+    font-size: 5vw;
+}
+
+.contact_details {
+    display: flex;
+    flex-direction: row; /* Stack the links vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vw; /* Space between links */
+}
+
+.contact_link img {
+    width: 10vw; /* Example fixed width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image takes the full width of the link */
+}
+    
 }
