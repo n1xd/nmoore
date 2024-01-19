@@ -19,7 +19,7 @@ body {
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(intropic.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(pics/intropic.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -372,7 +372,6 @@ body {
     transform: scale(1.1);
 }
 
-
 /*thinking*/
 
 .thoughts-container {
@@ -430,5 +429,70 @@ body {
 
 .thought-card:hover .thought-content {
     opacity: 1; /* Show thought on hover */
+}
+
+/*phone*/
+
+/* Media query for smaller screens (phones) */
+@media only screen and (max-width: 600px) and (min-device-width: 320px) {
+    .navbar {
+        height: 15vh; /* Adjust navbar height for smaller screens */
+    }
+
+    .navbar ul li {
+        margin: 0 1.5vw; /* Reduce margin between navbar items */
+    }
+
+    .navbar ul li a {
+        font-size: 2.5vw; /* Increase font size for better readability */
+    }
+
+    .content_cover, .content_intro, .content_projects, .content_contact {
+        width: 90%; /* Increase width to utilize more screen space */
+    }
+
+    .content_cover h1, .content_intro h1, .content_projects h1, .content_contact h1 {
+        font-size: 8vmin; /* Increase font size for headings */
+        line-height: 11vmin;
+    }
+
+    .content_cover p, .content_intro p, .content_contact p {
+        font-size: 3vmin; /* Increase font size for better readability */
+        line-height: 4.5vmin;
+    }
+
+   .content_projects h3{
+        font-size: 4vw;
+    }
+
+    .project-cards-container {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        padding: 0 10vw;
+    }
+
+    .project-card{
+        width: 40vw;
+        height: 70vw;
+    }
+
+    .project-card .project-date{
+        font-size: 2vw;
+    }
+
+    .thought-card {
+        height: 40vw;
+        width: 70vw;
+    }
+
+    .thought-card .thought-title{
+        font-size: 3.5vw;
+    }
+    
+    .thought-card .thought-content{
+        font-size: 2.5vw;
+    }
 }
 
