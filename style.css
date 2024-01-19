@@ -434,7 +434,7 @@ body {
 /*phone*/
 
 /* Media query for smaller screens (phones) */
-@media only screen and (max-width: 600px) and (min-device-width: 320px) {
+@media only screen and (max-width: 600px) and (min-device-width: 200px) {
     .navbar {
         height: 15vh; /* Adjust navbar height for smaller screens */
     }
@@ -461,6 +461,11 @@ body {
         line-height: 4.5vmin;
     }
 
+    .content_projects p{
+        font-size: 3.5vw;
+        margin: 2.5vh;
+    }
+
    .content_projects h3{
         font-size: 4vw;
     }
@@ -474,8 +479,9 @@ body {
     }
 
     .project-card{
-        width: 40vw;
+        width: 50vw;
         height: 70vw;
+        margin: 2.5vh;
     }
 
     .project-card .project-date{
@@ -488,10 +494,10 @@ body {
     }
 
     .thought-card .thought-title{
-        font-size: 3.5vw;
+        font-size: 5vw;
     }
     
     .thought-card .thought-content{
-        font-size: 2.5vw;
+        font-size: 2.7vw;
     }
 }
