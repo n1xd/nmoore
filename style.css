@@ -440,11 +440,11 @@ body {
     }
 
     .navbar ul li {
-        margin: 0 3vw; /* Reduce margin between navbar items */
+        margin: 0 2,5vw; /* Reduce margin between navbar items */
     }
 
     .navbar ul li a {
-        font-size: 3vw; /* Increase font size for better readability */
+        font-size: 2.5vw; /* Increase font size for better readability */
     }
 
     .content_cover, .content_intro, .content_projects, .content_contact {
@@ -467,7 +467,7 @@ body {
     }
 
    .content_projects h3{
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .project-cards-container {
@@ -479,26 +479,26 @@ body {
     }
 
     .project-card{
-        width: 150vw;
-        height:200vw;
+        width: 50vw;
+        height:100vw;
         margin: 4vh;
     }
 
     .project-card .project-date{
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     .thought-card {
         height: 80vw;
-        width: 140vw;
+        width: 90vw;
     }
 
     .thought-card .thought-title{
-        font-size: 10vw;
+        font-size: 7vw;
     }
     
     .thought-card .thought-content{
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     .content_contact h1{
