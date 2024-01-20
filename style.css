@@ -463,12 +463,12 @@ body {
     }
 
     .content_projects p{
-        font-size: 5vw;
+        font-size: 4vmin;
         margin: 2.5vh;
     }
 
    .content_projects h3{
-        font-size: 6vw;
+        font-size: 5vmin;
     }
 
     .project-cards-container {
@@ -521,7 +521,7 @@ body {
 }
 
 .contact_link img {
-    width: 10vw; /* Example fixed width */
+    width: 12vw; /* Example fixed width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensures the image takes the full width of the link */
 }
