@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 html {
@@ -12,14 +12,17 @@ body {
     background-color: black;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     color: white; /* Set text color to white for better visibility on the black background */
+}
+
+.no-scroll-page {
+    overflow: hidden;
 }
 
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(intropic.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(pics/intropic.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -59,11 +62,12 @@ body {
 .navbar ul li {
     list-style: none;
     display: inline-block;
-    margin: 0 1.5vw; /* Adjusted margin */
+    margin: 0 1.2vw; /* Adjusted margin */
 }
 
 .navbar ul li a {
-    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3vw;
     text-decoration: none;
     color: #fff;
     text-transform: none;
@@ -76,6 +80,15 @@ body {
     opacity: 0.7;
 }
 
+.sidebar {
+    display: none;
+  }
+
+  #sidebarToggle {
+    display: none;
+  }
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -83,6 +96,16 @@ body {
     to {
         opacity: 1;
     }
+}
+
+#cursor {
+    font-weight: bold;
+    color: darkcyan;
+    animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
 
 .content_cover, .content_intro, .content_projects, .content_contact {
@@ -103,17 +126,56 @@ body {
 }
 
 .content_cover p {
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-size: 2.5vmin;
-    line-height: 3.5vmin;
     max-width: 60%;
     margin: 5% 20%; 
+    height: 10vmin;
 }
 
 .content_cover h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 7vmin;
     max-width: 100%;
     margin-top: 15vmin;
+}
+
+.quote-container {
+    position: relative;
+    text-align: center;
+  }
+  
+  .quote {
+    position: relative;
+    z-index: 2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 7vmin;
+    color: #fff;
+    inline-size: fit-content;
+    margin: 0 auto; /* Centers the text */
+  }
+  
+  .quote-container::before, .quote-container::after {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70vmin; /* Large size for the quotation marks */
+    color: rgba(255, 255, 255, 0.2); /* Light color for a subtle background effect */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+.quote-container::before {
+  content: '\201C'; /* Unicode for left double quotation mark */
+  left: -10vmin;
+  top: 15vmin;
+}
+
+.quote-container::after {
+  content: '\201D'; /* Unicode for right double quotation mark */
+  right: -10vmin;
+  bottom: -25vmin;
 }
 
 /*about*/
@@ -129,14 +191,22 @@ body {
 }
 
 .content_intro p {
+    font-family: 'Courier New', Courier, monospace;
     text-align: justify;
-    font-size: 2.5vmin;
-    line-height: 3.5vmin;
-    max-width: 80%;
-    margin: 5% 20%; 
+    font-size: 2.3vmin;
+    white-space: pre-wrap;
+    word-wrap:break-word;
+    max-width:85%;
+    margin: 5% 20%;
+    height: 200px; /* Fixed height */
+    overflow-y: auto;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .content_intro h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 7vmin;
     color: #fff;
     text-align: center;
@@ -183,6 +253,7 @@ body {
 }
 
 .content_projects p{
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2.5vmin;
     max-width: 100%;
     margin: 5vh 0;
@@ -221,7 +292,7 @@ body {
 }
 
 .project-card {
-    background-color: #f9f9f9;
+    background-color: aliceblue;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-align: center;
@@ -239,11 +310,12 @@ body {
 }
 
 .project-card .project-date {
+    font-family: 'Courier New', Courier, monospace;
     position: absolute;
     bottom: 1vw; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    color: rgba(0,0,0,0.8); /* Adjust color as needed */
+    color: rgba(0,0,0,1); /* Adjust color as needed */
     font-size: 1vw; /* Adjust size as needed */
     text-align: center;
 }
@@ -284,7 +356,7 @@ body {
 }
 
 .project-card p {
-    font-size: 1.5vw; /* Adjusted font size for description */
+    font-size: 1.2vw; /* Adjusted font size for description */
     padding: 1vw; /* Padding for text alignment */
     margin: 0;
     color:rgba(0,0,0,0.8);
@@ -334,9 +406,10 @@ body {
 }
 
 .content_contact p{
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2.5vh;
     max-width: 100%;
-    margin: 5vh 0;
+    margin: 5vmin 20vmax;
 }
 
 .contact_details {
@@ -383,7 +456,7 @@ body {
 }
 
 .thought-card {
-    background-color: whitesmoke;
+    background-color:aliceblue;
     color: white;
     width: 60%; /* Adjust width as needed */
     height: 15vw;
@@ -398,6 +471,8 @@ body {
 
 .thought-card .thought-title {
     color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -410,8 +485,9 @@ body {
 
 .thought-card .thought-content {
     color: black;
+    font-family: 'Courier New', Courier, monospace;
     text-align: justify;
-    font-size: 1.2vw;
+    font-size: 1vw;
     margin: 0;
     opacity: 0;
     position: absolute;
@@ -436,25 +512,64 @@ body {
 /* Media query for smaller screens (phones) */
 @media only screen and (max-width: 600px) and (min-device-width: 0px) {
     .navbar {
-        height: 10vh; /* Adjust navbar height for smaller screens */
-    }
-
-    .navbar ul li {
-        margin: 0 1.5vw; /* Reduce margin between navbar items */
-    }
-
-    .navbar ul li a {
-        font-size: 2.5vw; /* Increase font size for better readability */
-    }
+        display: none;
+      }
+    
+      .sidebar {
+        height: 100%;
+        width: 0; /* Sidebar width is 0 by default */
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111; /* Sidebar background */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        transition: 0.5s; /* Smooth transition */
+        padding-top: 60px; /* Space for the top content */
+      }
+      
+      .sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        width: 0; /* Sidebar is initially hidden */
+        transition: width 0.5s ease;
+      }
+      
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+      
+      #sidebarToggle {
+        display: block; /* Ensure the toggle button is displayed on mobile */
+        position: fixed; /* Adjust position as needed */
+        top: 20px;
+        left: 20px;
+        z-index: 2; /* Ensure it's above other content */
+        /* Add more styling for the button as needed */
+      }
 
     .content_cover, .content_intro, .content_projects, .content_contact {
         width: 90%; /* Increase width to utilize more screen space */
     }
 
+    .quote-container::before {
+        content: '\201C'; /* Unicode for left double quotation mark */
+        left: -5vmin;
+        top: 15vmin;
+      }
+      
+    .quote-container::after {
+        content: '\201D'; /* Unicode for right double quotation mark */
+        right: -5vmin;
+        bottom: -16vmin;
+      }
+
     .content_cover h1, .content_intro h1, .content_projects h1, .content_contact h1 {
         font-size: 8vmin; /* Increase font size for headings */
         line-height: 11vmin;
-        margin-top: 10vh;
     }
 
     .content_cover p, .content_intro p, .content_contact p {
@@ -463,12 +578,12 @@ body {
     }
 
     .content_projects p{
-        font-size: 4vmin;
+        font-size: 5vw;
         margin: 2.5vh;
     }
 
    .content_projects h3{
-        font-size: 5vmin;
+        font-size: 4vw;
     }
 
     .project-cards-container {
@@ -480,26 +595,26 @@ body {
     }
 
     .project-card{
-        width: 50vw;
-        height:80vw;
+        width: 150vw;
+        height:200vw;
         margin: 4vh;
     }
 
     .project-card .project-date{
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .thought-card {
         height: 80vw;
-        width: 85vw;
+        width: 140vw;
     }
 
     .thought-card .thought-title{
-        font-size: 7vw;
+        font-size: 10vw;
     }
     
     .thought-card .thought-content{
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .content_contact h1{
@@ -521,7 +636,7 @@ body {
 }
 
 .contact_link img {
-    width: 12vw; /* Example fixed width */
+    width: 10vw; /* Example fixed width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensures the image takes the full width of the link */
 }

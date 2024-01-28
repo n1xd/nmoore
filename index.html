@@ -5,7 +5,7 @@
         <link rel="icon" href="icon.png" type="image/png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body class="no-scroll-page">
         <div class="banner">
             <div class="navbar">
                 <ul>
@@ -18,10 +18,55 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </div>
+            <div id="sidebar" class="sidebar">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Me</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="writing.html">Writing</a></li>
+                  <li><a href="arts.html">Arts</a></li>
+                  <li><a href="thoughts.html">Thoughts</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+              
+              <button id="sidebarToggle">Menu</button>
             <div class="content_cover">
-                <h1>"There's never been a story of more woe."</h1>
-                <p>Hey! Welcome to my personal website where I may share some thoughts and work when I have some spare time.</p>
+                <div class="quote-container">
+                    <h1 class="quote">There&rsquo;s never been a story of more woe.</h1>
+                  </div>
+                <p>Hey! Welcome to my personal website where I may share some <span id="cursor">|</span></p>
             </div>
         </div>
+        <script>
+            const text = "thoughts and work when I have some spare time.";
+const typingElement = document.getElementById('typewriter');
+const cursorElement = document.getElementById('cursor');
+let index = 0;
+
+function typeWriter() {
+    if (index < text.length) {
+        cursorElement.insertAdjacentText('beforebegin', text.charAt(index));
+        index++;
+        setTimeout(typeWriter, 50); // Adjust speed here
+    }
+}
+            // Start typing effect after the page is loaded
+            window.onload = typeWriter;
+
+            //sidebar
+            document.getElementById('sidebarToggle').addEventListener('click', function() {
+                var sidebar = document.getElementById('sidebar');
+                if (sidebar.style.width === '250px') {
+                  sidebar.style.width = '0';
+                } else {
+                  sidebar.style.width = '250px';
+                }
+              });
+              document.getElementById('sidebarToggle').addEventListener('click', function() {
+                var sidebar = document.getElementById('sidebar');
+                sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px'; // Toggle width
+              });
+        </script>
     </body>
 </html>
