@@ -514,42 +514,6 @@ body {
     .navbar {
         display: none;
       }
-    
-      .sidebar {
-        height: 100%;
-        width: 0; /* Sidebar width is 0 by default */
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111; /* Sidebar background */
-        overflow-x: hidden; /* Prevent horizontal scroll */
-        transition: 0.5s; /* Smooth transition */
-        padding-top: 60px; /* Space for the top content */
-      }
-      
-      .sidebar a {
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        width: 0; /* Sidebar is initially hidden */
-        transition: width 0.5s ease;
-      }
-      
-      .sidebar a:hover {
-        color: #f1f1f1;
-      }
-      
-      #sidebarToggle {
-        display: block; /* Ensure the toggle button is displayed on mobile */
-        position: fixed; /* Adjust position as needed */
-        top: 20px;
-        left: 20px;
-        z-index: 2; /* Ensure it's above other content */
-        /* Add more styling for the button as needed */
-      }
 
     .content_cover, .content_intro, .content_projects, .content_contact {
         width: 90%; /* Increase width to utilize more screen space */
