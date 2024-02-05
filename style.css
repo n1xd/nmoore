@@ -511,10 +511,26 @@ body {
 
 /* Media query for smaller screens (phones) */
 @media only screen and (max-width: 600px) and (min-device-width: 0px) {
-    .navbar {
-        display: none;
-      }
+    
+.navbar ul li:last-child {
+    margin-right: 5vw; /* Adjust this value as needed */
+}
 
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 1.2vw; /* Adjusted margin */
+}
+
+.navbar ul li a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3vw;
+    text-decoration: none;
+    color: #fff;
+    text-transform: none;
+    transition: color 1s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+    
     .content_cover, .content_intro, .content_projects, .content_contact {
         width: 90%; /* Increase width to utilize more screen space */
     }
