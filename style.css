@@ -512,8 +512,11 @@ body {
 /* Media query for smaller screens (phones) */
 @media only screen and (max-width: 600px) and (min-device-width: 0px) {
     
+    .navbar {
+        justify-content: center    }
+
 .navbar ul li:last-child {
-    margin-right: 5vw; /* Adjust this value as needed */
+    margin-right: 0; /* Adjust this value as needed */
 }
 
 .navbar ul li {
@@ -524,7 +527,7 @@ body {
 
 .navbar ul li a {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.3vw;
+    font-size: 1.5vh;
     text-decoration: none;
     color: #fff;
     text-transform: none;
@@ -532,7 +535,7 @@ body {
 }
     
     .content_cover, .content_intro, .content_projects, .content_contact {
-        width: 90%; /* Increase width to utilize more screen space */
+        width: 90%;
     }
 
     .quote-container::before {
@@ -553,17 +556,21 @@ body {
     }
 
     .content_cover p, .content_intro p, .content_contact p {
-        font-size: 3vmin; /* Increase font size for better readability */
+        font-size: 2vh; /* Increase font size for better readability */
         line-height: 4.5vmin;
     }
 
+    .content_intro p {
+        margin: 3vh 10vw;
+    }
+
     .content_projects p{
-        font-size: 5vw;
+        font-size: 3.5vw;
         margin: 2.5vh;
     }
 
    .content_projects h3{
-        font-size: 4vw;
+        font-size: 2.5vh;
     }
 
     .project-cards-container {
@@ -575,36 +582,37 @@ body {
     }
 
     .project-card{
-        width: 150vw;
-        height: 1vh;
+        width: 50vw;
+        height: 50vh;
         margin: 4vh;
     }
 
     .project-card .project-date{
-        font-size: 5vw;
+        font-size: 2vh;
     }
 
     .thought-card {
-        height: 80vw;
-        width: 140vw;
+        height: 30vh;
+        width: 80vw;
     }
 
     .thought-card .thought-title{
-        font-size: 10vw;
+        font-size: 3vh;
     }
     
     .thought-card .thought-content{
-        font-size: 5vw;
+        font-size: 1.7vh;
     }
 
     .content_contact h1{
-    font-size: 12vw;
+    font-size: 7vh;
     max-width: 100%;
     margin-top: 15vh;
 }
 
 .content_contact p{
-    font-size: 5vw;
+    font-size: 4vw;
+    margin: 5vw 0;
 }
 
 .contact_details {
@@ -616,9 +624,10 @@ body {
 }
 
 .contact_link img {
-    width: 10vw; /* Example fixed width */
+    width: 12vw; /* Example fixed width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensures the image takes the full width of the link */
+    padding: 0;
 }
     
 }
