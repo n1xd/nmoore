@@ -527,7 +527,7 @@ body {
 
 .navbar ul li a {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1vh;
+    font-size: 0.8vh;
     text-decoration: none;
     color: #fff;
     text-transform: none;
@@ -556,8 +556,8 @@ body {
     }
 
     .content_cover p, .content_intro p, .content_contact p {
-        font-size: 1.8vh; /* Increase font size for better readability */
-        line-height: 2vh;
+        font-size: 1.5vh; /* Increase font size for better readability */
+        line-height: 1.8vh;
     }
 
     .content_intro p {
