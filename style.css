@@ -527,7 +527,7 @@ body {
 
 .navbar ul li a {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5vh;
+    font-size: 1vh;
     text-decoration: none;
     color: #fff;
     text-transform: none;
@@ -556,8 +556,8 @@ body {
     }
 
     .content_cover p, .content_intro p, .content_contact p {
-        font-size: 2vh; /* Increase font size for better readability */
-        line-height: 4.5vmin;
+        font-size: 1.8vh; /* Increase font size for better readability */
+        line-height: 2vh;
     }
 
     .content_intro p {
@@ -583,7 +583,7 @@ body {
 
     .project-card{
         width: 50vw;
-        height: 50vh;
+        height: 40vh;
         margin: 4vh;
     }
 
@@ -601,7 +601,7 @@ body {
     }
     
     .thought-card .thought-content{
-        font-size: 1.7vh;
+        font-size: 1.5vh;
     }
 
     .content_contact h1{
