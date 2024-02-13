@@ -459,7 +459,7 @@ body {
     background-color:aliceblue;
     color: white;
     width: 60%; /* Adjust width as needed */
-    height: 15vw;
+    height: 40vh;
     margin: 2vh 0; /* Spacing between cards */
     padding: 2vh;
     border-radius: 10px;
@@ -487,7 +487,7 @@ body {
     color: black;
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
-    font-size: 1vw;
+    font-size: 2.3vh;
     margin: 0;
     opacity: 0;
     position: absolute;
