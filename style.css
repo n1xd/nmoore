@@ -619,7 +619,7 @@ body {
 
     .content_cover p, .content_intro p, .content_contact p {
         font-size: 0.8rem; /* More consistent font sizing */
-        line-height: 1.2; /* Improved readability */
+        line-height: 1; /* Improved readability */
         word-wrap: break-word;
     }
 
