@@ -526,13 +526,6 @@ body {
         display: none;
     }
 
-    .banner {
-        background: linear-gradient(to bottom, black, transparent);
-        position: fixed; /* Keep the bar at the top */
-        width: 100%; /* Ensure it spans the full width */
-        z-index: 1000; /* Ensure it's above other content */
-    }
-
     .hamburger{
         position: fixed;
         top: 0;
