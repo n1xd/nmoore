@@ -522,6 +522,10 @@ body {
         display: none;  
     }
 
+    .navbar a {
+        display: none;
+    }
+
     .hamburger{
         position: relative;
         display: block;
