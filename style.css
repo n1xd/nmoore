@@ -108,7 +108,6 @@ body {
     display: inline-block;
     width: 1ch;
     opacity: 1;
-    font-weight: bold;
     color: darkcyan;
     animation: blink 1s infinite step-start;
 }
