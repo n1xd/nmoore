@@ -582,8 +582,14 @@ body {
         text-decoration: none;
     }
     
-    .content_cover, .content_intro, .content_projects, .content_contact {
+    .content_intro, .content_projects {
         width: 90%;
+        height: 75vh;
+    }
+
+    .content_cover {
+        width: 90%;
+        height: 50vh;
     }
 
     .quote-container::before {
@@ -599,18 +605,18 @@ body {
       }
 
     .content_contact {
-        padding-top: 10vh;
+        padding-top: 20vh;
     }
     
       .content_cover h1, .content_intro h1, .content_projects h1, .content_contact h1 {
-        font-size: 8vmin; /* Increase font size for headings */
+        font-size: 8vmin;
         line-height: 1.2;
-        margin-top: 5vh;
+        margin-top: 15vh;
     }
 
     .content_cover p, .content_intro p, .content_contact p {
-        font-size: 0.7rem; /* More consistent font sizing */
-        line-height: 1.6; /* Improved readability */
+        font-size: 0.8rem; /* More consistent font sizing */
+        line-height: 1.5; /* Improved readability */
         word-wrap: break-word;
     }
 
