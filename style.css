@@ -613,20 +613,20 @@ body {
     
       .content_cover h1, .content_intro h1, .content_projects h1, .content_contact h1 {
         font-size: 8vmin;
-        line-height: 1.2;
+        line-height: 1.4;
         margin-top: 15vh;
     }
 
     .content_cover p, .content_intro p, .content_contact p {
         font-size: 0.8rem; /* More consistent font sizing */
-        line-height: 1; /* Improved readability */
+        line-height: 1.2; /* Improved readability */
         word-wrap: break-word;
     }
 
     .content_intro p {
         margin: 2vh 5vw; /* Reduced margin for better space utilization */
     overflow:visible;
-    margin: 10 auto; /* Centers the block if it has a specified width */
+    margin: 25 auto; /* Centers the block if it has a specified width */
     width: 80%;
     }
 
