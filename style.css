@@ -526,11 +526,21 @@ body {
         display: none;
     }
 
+    .banner {
+        background: linear-gradient(to bottom, black, transparent);
+        position: fixed; /* Keep the bar at the top */
+        width: 100%; /* Ensure it spans the full width */
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
     .hamburger{
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
         display: block;
         width: 18vw;
-        height: 7vh;
+        height: 10vh;
 
         appearance: none;
         background: none;
@@ -545,7 +555,7 @@ body {
         height: 1vh;
         border-radius: 2px;
         background-color: white;
-        margin: 1.5vh 2vh;
+        margin: 1vh 2vh;
         transition: 0.5s;
     }
 
