@@ -18,6 +18,9 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </div>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
             <div id="sidebar" class="sidebar">
                 <ul>
                   <li><a href="index.html">Home</a></li>
@@ -29,29 +32,43 @@
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
               </div>
-              
-              <button id="sidebarToggle">Menu</button>
+
             <div lang=en class="content_intro">
                 <h1>Something about me.</h1>
                 <p id="typewriter">I'm an MA student in the Department of Linguistics at the University of Pennsylvania, currently completing a part of my coursework at Pembroke College, University of Cambridge. I'm interested in computational linguistics, generative syntax, and semantics (in that order). I also spend a lot of time thinking<span id="cursor">|</span></p>
             </div>
         </div>
         <script>
-            const text = " about AI-related x-risks. My favourite case is ergative and I really dislike pasta.";
-const typingElement = document.getElementById('typewriter');
-const cursorElement = document.getElementById('cursor');
-let index = 0;
+            document.addEventListener('DOMContentLoaded', function() {
+                // Typewriter effect setup
+                const text = " about AI-related x-risks. My favourite case is ergative and I really dislike pasta.";
+                const typingElement = document.getElementById('typewriter');
+                const cursorElement = document.getElementById('cursor');
+                let index = 0;
+            
+                function typeWriter() {
+                    if (index < text.length) {
+                        cursorElement.insertAdjacentText('beforebegin', text.charAt(index));
+                        index++;
+                        setTimeout(typeWriter, 50); // Adjust speed here
+                    }
+                }
+                typeWriter(); // Start typewriter effect
+            
+                // Sidebar toggle setup
+                var hamburger = document.querySelector('.hamburger');
+                var sidebar = document.querySelector('.sidebar');
+            
+                hamburger.addEventListener('click', function() {
+                    sidebar.classList.toggle('is-active');
+                });
+            });
 
-function typeWriter() {
-    if (index < text.length) {
-        cursorElement.insertAdjacentText('beforebegin', text.charAt(index));
-        index++;
-        setTimeout(typeWriter, 50); // Adjust speed here
-    }
-}
-    
-            // Start typing effect after the page is loaded
-            window.onload = typeWriter;
+            hamburger.addEventListener('click', function() {
+                console.log('Hamburger clicked'); // Temporary console log for testing
+                sidebar.classList.toggle('is-active');
+            });
+
         </script>
     </body>
 </html>

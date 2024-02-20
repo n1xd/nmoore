@@ -18,19 +18,22 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </div>
-            <div id="sidebar" class="sidebar">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About Me</a></li>
-                  <li><a href="projects.html">Projects</a></li>
-                  <li><a href="writing.html">Writing</a></li>
-                  <li><a href="arts.html">Arts</a></li>
-                  <li><a href="thoughts.html">Thoughts</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
+            <button class="hamburger">
+              <div class="bar"></div>
+          </button>
+          <div id="sidebar" class="sidebar">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="writing.html">Writing</a></li>
+                <li><a href="arts.html">Arts</a></li>
+                <li><a href="thoughts.html">Thoughts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>          
+
               
-              <button id="sidebarToggle">Menu</button>
             <div class="content_cover">
                 <div class="quote-container">
                     <h1 class="quote">There&rsquo;s never been a story of more woe.</h1>
@@ -39,34 +42,36 @@
             </div>
         </div>
         <script>
-            const text = "thoughts and work when I have some spare time.";
+document.addEventListener('DOMContentLoaded', function() {
+  // Typewriter effect setup
+const text = "thoughts and work in my spare time.";
 const typingElement = document.getElementById('typewriter');
 const cursorElement = document.getElementById('cursor');
 let index = 0;
 
-function typeWriter() {
-    if (index < text.length) {
-        cursorElement.insertAdjacentText('beforebegin', text.charAt(index));
-        index++;
-        setTimeout(typeWriter, 50); // Adjust speed here
-    }
-}
-            // Start typing effect after the page is loaded
-            window.onload = typeWriter;
 
-            //sidebar
-            document.getElementById('sidebarToggle').addEventListener('click', function() {
-                var sidebar = document.getElementById('sidebar');
-                if (sidebar.style.width === '250px') {
-                  sidebar.style.width = '0';
-                } else {
-                  sidebar.style.width = '250px';
-                }
-              });
-              document.getElementById('sidebarToggle').addEventListener('click', function() {
-                var sidebar = document.getElementById('sidebar');
-                sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px'; // Toggle width
-              });
+  function typeWriter() {
+      if (index < text.length) {
+          cursorElement.insertAdjacentText('beforebegin', text.charAt(index));
+          index++;
+          setTimeout(typeWriter, 50); // Adjust speed here
+      }
+  }
+  typeWriter(); // Start typewriter effect
+
+  // Sidebar toggle setup
+  var hamburger = document.querySelector('.hamburger');
+  var sidebar = document.querySelector('.sidebar');
+
+  hamburger.addEventListener('click', function() {
+      sidebar.classList.toggle('is-active');
+  });
+});
+
+hamburger.addEventListener('click', function() {
+  console.log('Hamburger clicked'); // Temporary console log for testing
+  sidebar.classList.toggle('is-active');
+});
         </script>
     </body>
 </html>
