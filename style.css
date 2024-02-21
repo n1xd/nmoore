@@ -522,7 +522,7 @@ body {
 @media only screen and (max-width: 600px) and (min-device-width: 0px) {
     
     .navbar {
-        display: none;  
+        height: 13vh;  
     }
 
     .navbar a {
