@@ -624,10 +624,9 @@ body {
     }
 
     .content_intro p {
-        margin: 2vh 5vw; /* Reduced margin for better space utilization */
-    overflow:visible;
-    margin: 25vh; /* Centers the block if it has a specified width */
-    width: 80%;
+        margin: 3vh auto; /* Reduced margin for better space utilization */
+        overflow:visible;
+        width: 80%;
     }
 
     .content_projects p{
