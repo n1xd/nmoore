@@ -626,7 +626,7 @@ body {
     .content_intro p {
         margin: 2vh 5vw; /* Reduced margin for better space utilization */
     overflow:visible;
-    margin: 25 auto; /* Centers the block if it has a specified width */
+    margin: 25vh; /* Centers the block if it has a specified width */
     width: 80%;
     }
 
