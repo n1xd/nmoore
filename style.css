@@ -471,11 +471,10 @@ body {
     background-color:aliceblue;
     color: white;
     width: 60%; /* Adjust width as needed */
-    height: 40vh;
-    margin: 2vh 0; /* Spacing between cards */
-    padding: 2vh;
-    border-radius: 10px;
+    padding-top: 40%;
     position: relative;
+    margin: 2vh 0; /* Spacing between cards */
+    border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -499,7 +498,7 @@ body {
     color: black;
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
-    font-size: 2.3vh;
+    font-size: 1.2vw;
     margin: 0;
     opacity: 0;
     position: absolute;
@@ -657,8 +656,8 @@ body {
     }
 
     .thought-card {
-        height: 30vh;
         width: 80vw;
+        height: 35vw;
     }
 
     .thought-card .thought-title{
