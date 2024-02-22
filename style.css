@@ -616,6 +616,10 @@ body {
         margin-top: 15vh;
     }
 
+    .content_intro h1 {
+        margin-top: 25vh;
+    }
+
     .content_cover p, .content_intro p, .content_contact p {
         font-size: 0.8rem; /* More consistent font sizing */
         line-height: 1.2; /* Improved readability */
