@@ -29,6 +29,10 @@ body {
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(pics/intropic.jpg);
     background-size: cover;
     background-position: center;
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+    min-height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -197,6 +201,7 @@ body {
     color: #fff;
     width: 60%;
     text-align: center;
+    height: auto;
 }
 
 .content_intro p {
@@ -398,7 +403,6 @@ body {
     color: white;
     width: 80%;
     text-align: center;
-    padding-top: 20vh;
     margin: 0 auto; /* Center the content */
 }
 
@@ -411,7 +415,6 @@ body {
 .content_contact h1{
     font-size: 7vh;
     max-width: 100%;
-    margin-top: 15vh;
 }
 
 .content_contact p{
@@ -607,11 +610,8 @@ body {
         bottom: -16vmin;
       }
 
-    .content_contact {
-        padding-top: 15vh;
-    }
     
-      .content_cover h1, .content_intro h1, .content_projects h1, .content_contact h1 {
+      .content_cover h1, .content_intro h1, .content_projects h1 {
         font-size: 8vmin;
         line-height: 1.4;
         margin-top: 15vh;
@@ -676,7 +676,6 @@ body {
     .content_contact h1{
     font-size: 10vw;
     max-width: 100%;
-    margin-top: 15vh;
     line-height: 7.5vh;
 }
 
