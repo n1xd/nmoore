@@ -247,6 +247,7 @@ body {
     text-align: center;
     padding-top: 5%; /* Adjust padding as needed */
     margin: 0 auto; /* Center the content */
+    padding-bottom: 25vh;
 }
 
 .content_projects h1, .content_projects h2, .content_projects h3, .content_projects p {
@@ -255,15 +256,17 @@ body {
     max-width: 80%; 
 }
 
+.content_projects h3 {
+    font-size: 3vmin; /* Or any specific size you prefer */
+    margin: 0; /* Remove 'auto' to prevent centering */
+    max-width: 100%; /* Ensure they can use the full width if needed */
+    text-align: left; /* Explicitly align text to the left */
+}
+
 .content_projects h1{
     font-size: 7vmin;
     max-width: 100%;
     margin-top: 15vmin;
-}
-
-.content_projects h3{
-    font-size: 3vmin;
-    max-width: 100%;
 }
 
 .content_projects p{
@@ -273,125 +276,89 @@ body {
     margin: 5vh 0;
 }
 
-.project-cards-container {
+.project-title-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 10vw 30vh;
-}
-
-.project-card-container {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    margin: 1.5vw;
-    width: calc(33% - 3vw);
-    flex-direction: column;
-}
-
-.project-card-container a {
-    text-decoration: none;
-    color: inherit;
-    display: block; /* Change to block to make it clickable */
-}
-
-.project-card-container a:hover .project-card {
-    /* Add your hover effects here, similar to what was previously .project-card:hover */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-    transform: translateY(-10px);
-}
-
-.project-card, .project-card h1, .project-card h2, .project-card p, .project-card a {
-    color: black; /* Ensure text is visible on black background */
-}
-
-.project-card {
-    background-color: aliceblue;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    text-align: center;
+    justify-content: space-between; /* This will push the button to the far right */
+    align-items: center; /* Keeps items aligned vertically in the center */
+    width: 100%;
+    margin: 20 0vh;
+    padding-top: 3vh;
     position: relative;
-    width: 30%; /* Full width of the container */
-    height: 25vw; /* Height is set automatically based on content */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: black;
-    display: flex; /* Use flexbox for internal layout */
-    align-items: flex-start; /* Center items vertically */
-    justify-content: center;
-    cursor: pointer;
-    margin: 1vw;
 }
 
-.project-card .project-date {
+.project-title-container::before {
+    content: ''; /* Required for pseudo-elements */
+    display: block; /* Or 'inline-block' depending on your layout */
+    width: 100%; /* Or adjust to the desired line width */
+    height: 1px; /* Line thickness */
+    background-color: #fff; /* Line color, adjust as needed */
+    margin-right: 10px; /* Space between the line and the title text */
+    margin-top: 0;
+    position: absolute; /* Position it relative to its parent */
+    left: 0; /* Align to the far left of the container */
+    top: 0; /* Adjust alignment to ensure it's centered */
+}
+
+.right-container {
+    display: flex;
+    align-items: center; /* Vertically centers the items inside the container */
+}
+
+.project-date {
+    color: #fff; /* Text color */
+    font-size: 2.5vmin; /* Adjust size as needed */
+    margin-right: 10px; /* Space between the date and the "Read More" button */
     font-family: 'Courier New', Courier, monospace;
-    position: absolute;
-    bottom: 1vw; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(0,0,0,1); /* Adjust color as needed */
-    font-size: 1vw; /* Adjust size as needed */
-    text-align: center;
 }
 
-.project-card:hover {
-    box-shadow: inset 0 0 2vw rgba(0, 0, 0, 0.6); /* Dark shadow on hover */
+.arrow {
+    display:inline-flex;
+    cursor: pointer; /* Makes the cursor appear as a pointer when hovering over the arrow */
+    transition: transform 1s ease;
+    position: relative;
+    margin-left: 1vw;
 }
 
-.project-card:hover::after {
-    opacity: 1; /* Visible on hover */
-}
-
-.project-title, .project-description {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    text-align: center;
-    transition: opacity 0.3s ease;
+.arrow svg {
+    fill: currentColor; /* Inherits the text color of the parent element */
 }
 
 .project-description {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex !important;
+    flex-direction: column; /* Ensures the content flows vertically */
+    align-items: flex-start; /* Aligns the items to the right */
+    text-align: left; /* Ensures that the text itself is also right-aligned */
+    visibility: hidden;
     opacity: 0;
-    width: 90%;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.7s, max-height 0.7s, visibility 0.7s linear 0.7s;
 }
 
-.project-card:hover .project-title {
-    opacity: 0; /* Hide title on hover */
-}
-
-.project-card:hover .project-date {
-    opacity: 0; /* Hide title on hover */
-}
-
-.project-card:hover .project-description {
-    opacity: 1; /* Show description on hover */
-}
-
-.project-card p {
-    font-size: 1.2vw; /* Adjusted font size for description */
-    padding: 1vw; /* Padding for text alignment */
-    margin: 0;
-    color:rgba(0,0,0,0.8);
-    text-align: left;
-}
-
-.project-card a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: black;
+.read-more-btn {
+    background-color: rgba(157, 9, 118);
     color: white;
+    padding: 10px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
 }
 
-.project-card a:hover {
-    background-color: black; /* Darker shade on hover */
+.read-more-btn:hover {
+    background-color: rgba(157, 9, 118, 0.75);
 }
 
+/* Class to rotate arrow and show description */
+.arrow.active {
+    transform: rotate(180deg);
+}
+
+.project-description.show {
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fade to fully visible */
+    max-height: 500px; /* Enough height to reveal the content */
+    transition: opacity 1.5s, max-height 1.5s; /* Ensure transitions are applied for both showing and hiding */
+}
 
 /*contact*/
 
@@ -587,6 +554,7 @@ body {
         text-decoration: none;
     }
     
+
     .content_intro, .content_projects {
         width: 90%;
         height: 75vh;
@@ -632,45 +600,70 @@ body {
         width: 80%;
     }
 
-    .content_projects p{
-        font-size: 3.5vw;
-        margin: 2.5vh;
+    .content_projects {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    color: white;
+    width: 80%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 25vh;
+    margin: 0 auto;
+    display: flex; /* Added flex display */
+    flex-direction: column; /* Directs children to stack vertically */
+    min-height: 100vh; /* Minimum height is set to 100% of the viewport height */
+    justify-content: flex-start;
     }
 
-   .content_projects h3{
-        font-size: 2.5vh;
+    .project-title-container {
+        flex-direction: column; /* Keep the vertical stacking */
+        align-items: center; /* Center items horizontally within the container */
+        text-align: center;
     }
 
-    .project-cards-container {
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 80%;
-        padding: 0 10vw;
+    .content_projects h3 {
+        font-size: 3vh;
+        text-align: center;
     }
 
-    .project-card{
-        width: 50vw;
-        height: 40vh;
-        margin: 4vh;
+    .content_projects p {
+        font-size: 2vh;
+        text-align: center;
     }
 
-    .project-card .project-date{
+
+    .right-container {
+        flex-direction: column; /* Keep the vertical stacking */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Ensure text within is centered */
+        margin-top: 3vh;
+    }
+
+    .project-date {
+        order: 1; /* Ensure the date comes first */
+        margin-bottom: 3vh; /* Space between the date and the "Read More" button */
         font-size: 2vh;
     }
 
-    .thought-card {
-        width: 80vw;
-        height: 35vw;
+    .read-more-btn {
+        order: 2; /* Ensure the "Read More" button comes after the date */
     }
 
-    .thought-card .thought-title{
-        font-size: 3vh;
+    .arrow {
+        margin-left: 2vw; /* Remove the left margin from the arrow */
     }
-    
-    .thought-card .thought-content{
-        font-size: 1.2vh;
+
+    .project-description {
+        order: 0; /* Description comes right after the title when expanded */
+        width: 100%; /* Ensure the description takes the full width */
+        font-size: 2vh;
+        text-align: center;
+        align-items: center;
     }
+
+
 
     .arts-section{
         margin-top: 30vh;
@@ -709,4 +702,6 @@ body {
     display: block; /* Ensures the image takes the full width of the link */
     padding: 0vw 10vw;    
 }
+
+
 }

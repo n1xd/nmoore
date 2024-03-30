@@ -35,68 +35,84 @@
         <div class="content_projects">
             <div class="intro-section">
                 <h1>Academic Projects.</h1>
-                <p>I'm currently working on pattern recognition thresholds, acquisition of ergativity, and deception recogntion.<br>Learn more about my past projects by clicking/tapping on the cards.</p>
+                <p>I'm currently working on pattern recognition thresholds, acquisition of ergativity, and deception recogntion. Learn more about my past projects from the write-ups linked below.</p>
             </div>
 
-            <div class="project-cards-container">
-                <a href="pdfs/nc_handout.pdf" class="project-card">
-                    <div class="project-title">
-                        <h3>[Handout] More Misery Is Coming: Negative Concord in West Slavic</h3>
+            <div class="project-card-container">
+                <div class="project-title-container">
+                    <h3 class="project-title">More Misery Is Coming: Negative Concord in West Slavic<span class="arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 15">
+                            <path d="M2 7l10 10l10-10H2z"/> 
+                        </svg>
+                    </span>
+                    </h3>
+                    <div class="right-container">
+                        <div class="project-date">16.1.24</div>
+                        <a href="pdfs/5520.pdf" class="read-more-btn">Read More</a>
                     </div>
-                    <div class="project-description">
-                        <p>A complementary handout to my project on negative concord.</p>
+                </div>
+                <div class="project-description" style="display: none;">
+                    This paper re-evaluates the feasibility of analysing negative concord as a form of the traditional Minimalist Agree.
+                </div>
+            </div>   
+            
+            <div class="project-card-container">
+                <div class="project-title-container">
+                    <h3 class="project-title">World Through the Eyes of AI<span class="arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 15">
+                            <path d="M2 7l10 10l10-10H2z"/> 
+                        </svg>
+                    </span>
+                    </h3>
+                    <div class="right-container">
+                        <div class="project-date">18.8.23</div>
+                        <a href="pdfs/nlp_principles.pdf" class="read-more-btn">Read More</a>
                     </div>
-                    <span class="project-date">Posted on: 19/01/2024</span>
-                </a>
-                
-                <a href="pdfs/5520.pdf" class="project-card">
-                    <div class="project-title">
-                        <h3>More Misery Is Coming: Negative Concord in West Slavic</h3>
-                    </div>
-                    <div class="project-description">
-                        <p>This paper re-evaluates the feasibility of analysing negative concord as a form of the traditional Minimalist Agree</p>
-                    </div>
-                    <span class="project-date">Posted on: 16/01/2024</span>
-                </a>
+                </div>
+                <div class="project-description" style="display: none;">
+                    A beginner-friendly introduction to LLMs.
+                </div>
+            </div>  
 
-                <a href="pdfs/nlp_principles.pdf" class="project-card">
-                    <div class="project-title">
-                        <h3>NLP<br>Principles</h3>
+            <div class="project-card-container">
+                <div class="project-title-container">
+                    <h3 class="project-title">Czech SE: Multiple Functions Are Better Than One<span class="arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 15">
+                            <path d="M2 7l10 10l10-10H2z"/> 
+                        </svg>
+                    </span>
+                    </h3>
+                    <div class="right-container">
+                        <div class="project-date">15.3.23</div>
+                        <a href="pdfs/nlp_principles.pdf" class="read-more-btn">Read More</a>
                     </div>
-                    
-                    <div class="project-description">
-                        <p>This article is meant as a beginner-friendly overview of the mechanisms behind LLMs.</p>
-                    </div>
-                    <span class="project-date">Posted on: 18/08/2023</span>
-                </a>
+                </div>
+                <div class="project-description" style="display: none;">
+                    This paper re-applies established tests from existing literature on related Indo-European languages to show the clitic's diverse function.
+                </div>
+            </div>  
 
-                <a href="pdfs/5510.pdf" class="project-card">
-                    <div class="project-title">
-                        <h3>Czech SE: Multiple Functions Are Better Than One</h3>
-                    </div>
-                    <div class="project-description">
-                        <p>This paper re-applies established tests from existing literature on related Indo-European languages to show the clitic's diverse function.</p>
-                    </div>
-                    <span class="project-date">Posted on: 15/03/2023</span>
-                </a>
             </div>
         </div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-       
-          // Sidebar toggle setup
-          var hamburger = document.querySelector('.hamburger');
-          var sidebar = document.querySelector('.sidebar');
+            // Sidebar toggle setup
+            var hamburger = document.querySelector('.hamburger');
+            var sidebar = document.querySelector('.sidebar');
         
-          hamburger.addEventListener('click', function() {
-              sidebar.classList.toggle('is-active');
-          });
-        });
+            hamburger.addEventListener('click', function() {
+                sidebar.classList.toggle('is-active');
+            });
         
-        hamburger.addEventListener('click', function() {
-          console.log('Hamburger clicked'); // Temporary console log for testing
-          sidebar.classList.toggle('is-active');
+            // Project title and arrow click event setup
+            document.querySelectorAll('.project-title-container').forEach(item => {
+                item.addEventListener('click', function() {
+                    console.log('Project title clicked'); // Debugging line
+                    this.querySelector('.arrow').classList.toggle('active');
+                    this.parentNode.querySelector('.project-description').classList.toggle('show'); // Use a 'show' class for descriptions
+                });
+            });
         });
                 </script>
 </body>
