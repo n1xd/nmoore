@@ -676,6 +676,11 @@ body {
         width: 80%;
     }
 
+    .thought-card .thought-title {
+        font-size: 3vh;
+        max-width: 100%;
+    }
+
     .thought-card .thought-content {
         font-size: 1.5vh;
         max-width: 100%;
