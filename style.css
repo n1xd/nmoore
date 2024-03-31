@@ -679,11 +679,25 @@ body {
     .thought-card .thought-title {
         font-size: 3vh;
         max-width: 100%;
+        transition: opacity 0.3s ease;
     }
 
     .thought-card .thought-content {
         font-size: 1.5vh;
         max-width: 100%;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .thought-card.active .thought-title {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .thought-card.active .thought-content {
+        opacity: 1;
+        visibility: visible;
     }
 
     .arts-section{

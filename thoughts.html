@@ -68,19 +68,20 @@
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-           
-              // Sidebar toggle setup
-              var hamburger = document.querySelector('.hamburger');
-              var sidebar = document.querySelector('.sidebar');
+                // Sidebar toggle setup
+                var hamburger = document.querySelector('.hamburger');
+                var sidebar = document.querySelector('.sidebar');
             
-              hamburger.addEventListener('click', function() {
-                  sidebar.classList.toggle('is-active');
-              });
-            });
+                hamburger.addEventListener('click', function() {
+                    sidebar.classList.toggle('is-active');
+                });
             
-            hamburger.addEventListener('click', function() {
-              console.log('Hamburger clicked'); // Temporary console log for testing
-              sidebar.classList.toggle('is-active');
+                // Setup for thought cards to toggle content on click
+                document.querySelectorAll('.thought-card').forEach(card => {
+                    card.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                    });
+                });
             });
                     </script>
     </body>
