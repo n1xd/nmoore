@@ -673,10 +673,13 @@ body {
     }
 
     .thought-card{
-        
+        width: 80%;
     }
 
-
+    .thought-card .thought-content {
+        font-size: 1.5vh;
+        max-width: 100%;
+    }
 
     .arts-section{
         margin-top: 30vh;
