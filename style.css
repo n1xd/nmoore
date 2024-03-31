@@ -452,7 +452,7 @@ body {
     content: ''; /* Required for pseudo-elements */
     display: block; /* Treat the pseudo-element as a block */
     width: 100%; /* Adjust the width as needed */
-    height: 2px; /* Thickness of the line */
+    height: 1px; /* Thickness of the line */
     background-color: white; /* Color of the line */
     margin: 0 auto 1vh; /* Centers the line horizontally and adds space below it */
     position: absolute;
